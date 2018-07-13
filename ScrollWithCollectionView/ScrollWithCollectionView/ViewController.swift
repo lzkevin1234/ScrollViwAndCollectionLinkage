@@ -36,7 +36,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let topV = TopScrollView.init(frame: CGRect(x: 0, y: 0, width: screenW, height: 40), titles:titesArr)
+        let topV = TopScrollView.init(frame: CGRect(x: 0, y: 20, width: screenW, height: 40), titles:titesArr)
         topV.dele = self
         topView = topV
    
@@ -44,11 +44,11 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         topV.backgroundColor=UIColor(named: "#DDDDDD")
         
         let layout = UICollectionViewFlowLayout.init()
-        layout.itemSize = CGSize(width: screenW, height: screenH-40.0)
+        layout.itemSize = CGSize(width: screenW, height: screenH-60.0)
         layout.minimumLineSpacing = 0
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
-        let collectionV = UICollectionView(frame: CGRect(x: 0, y: 40, width: screenW, height: screenH-40), collectionViewLayout: layout)
+        let collectionV = UICollectionView(frame: CGRect(x: 0, y: 60, width: screenW, height: screenH-60), collectionViewLayout: layout)
         view.addSubview(collectionV)
         collectionV.delegate = self
         collectionV.dataSource = self
